@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.sunkaisens.isolated.module.dao.ModuleParasMapper">
+
+	<select id="findModuleParas" resultType="moduleParas"
+		parameterType="moduleParas">
+		SELECT
+		m.para_id paraId,
+		m.m_acc_ui_msg maccUiMsg,
+		m.module,
+		m.function,
+		m.sub_function subFunction,
+		m.msg_paras msgParas
+		FROM
+		module_paras m
+		WHERE 1 = 1
+		<if test="moduleParas.paraId != null and moduleParas.paraId != ''">
+			AND m.para_id = #{moduleParas.paraId}
+		</if>
+		<if test="moduleParas.module != null and moduleParas.module != ''">
+			AND m.module = #{moduleParas.module}
+		</if>
+		<if test="moduleParas.function != null and moduleParas.function !=''">
+			And m.function = #{moduleParas.function}
+		</if>
+		<if
+			test="moduleParas.subFunction != null and moduleParas.subFunction !=''">
+			And m.sub_function = #{moduleParas.subFunction}
+		</if>
+		<!-- group by m.para_id -->
+	</select>
+</mapper>

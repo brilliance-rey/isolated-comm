@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.sunkaisens</groupId>
-    <artifactId>web_base_backend</artifactId>
+    <artifactId>isolated-comm</artifactId>
     <version>1.0.0-release</version>
     <packaging>jar</packaging>
 
-    <name>web_base_backend</name>
-    <description>Web Base Backend Project</description>
+    <name>IsolatedCommunication</name>
+    <description>Isolated Communication Project</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -45,22 +45,27 @@
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-starter-tomcat</artifactId>
 				</exclusion> -->
-				<exclusion>
+				<!-- <exclusion>
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-starter-logging</artifactId>
-				</exclusion>
+				</exclusion> -->
 			</exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+        
+        <dependency>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-devtools</artifactId>
+        </dependency>
 				
-		<!-- 引入log4j2依赖 -->
-	    <dependency> 
+		<!-- 引入log4j2依赖， 使用springboot 自带的log-back  -->
+	    <!-- <dependency> 
 	        <groupId>org.springframework.boot</groupId>  
 	        <artifactId>spring-boot-starter-log4j2</artifactId>  
-	    </dependency>
+	    </dependency> -->
 	    
         <!-- 动态数据源 -->
         <dependency>
@@ -163,6 +168,11 @@
             <groupId>com.wuwenze</groupId>
             <artifactId>ExcelKit</artifactId>
             <version>2.0.7</version>
+        </dependency>
+        <dependency>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-configuration-processor</artifactId>
+        	<optional>true</optional>
         </dependency>
     </dependencies>
 

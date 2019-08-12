@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.sunkaisens.ibss.system.dao.UserMapper">
-    <resultMap id="BaseResultMap" type="com.sunkaisens.ibss.system.domain.User">
+<mapper namespace="com.sunkaisens.isolated.system.dao.UserMapper">
+    <resultMap id="BaseResultMap" type="com.sunkaisens.isolated.system.domain.User">
         <id column="user_id" jdbcType="DECIMAL" property="userId"/>
         <result column="username" jdbcType="VARCHAR" property="username"/>
         <result column="password" jdbcType="VARCHAR" property="password"/>

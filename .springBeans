@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:com.sunkaisens.ibss.MainApplication</config>
+		<config>java:com.sunkaisens.isolated.MainApplication</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

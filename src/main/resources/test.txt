@@ -1,0 +1,15 @@
+
+MAccUIMsg:SysToUI/Module:FT/Function:Status/SubFunction:hardStatus/HardName:FT/HardVersion:1.0.1/CPU:Intel Core i7/RAM:16G/SysVersion:1.0.1/SoftWare:1.0.1
+MAccUIMsg:SysToUI/Module:GL/Function:Status/SubFunction:hardStatus/HardName:GL/HardVersion:1.0.1/CPU:Intel Core i7/RAM:16G/SysVersion:1.0.1/SoftWare:1.0.1
+MAccUIMsg:SysToUI/Module:Master/Function:Status/SubFunction:hardStatus/HardName:Master/HardVersion:1.0.1/CPU:Intel Core i7/RAM:16G/SysVersion:1.0.1/SoftWare:1.0.1
+MAccUIMsg:SysToUI/Module:Slave/Function:Status/SubFunction:hardStatus/HardName:Slave/HardVersion:1.0.1/CPU:Intel Core i7/RAM:16G/SysVersion:1.0.1/SoftWare:1.0.1
+
+
+
+
+
+MAccUIMsg:SysToUI/Module:Master/Function:Status/SubFunction:linkStatus/PSTN:Init/ISDN:IDLE/3G4G:BUSY/SpLAN:Error/FTLAN:BUSY
+
+
+
+

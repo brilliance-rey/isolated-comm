@@ -1,5 +1,5 @@
 server:
-  port: 9527
+  port: 61902
 
 spring:
   datasource:
@@ -21,13 +21,7 @@ spring:
           username: root
           password: sunkaisens
           driver-class-name: com.mysql.jdbc.Driver
-          url: jdbc:mysql://127.0.0.1:3306/web_base_backend?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-        # 数据源-2，名称为 test
-#        test:
-#          username: root
-#          password: 123456
-#          driver-class-name: com.mysql.cj.jdbc.Driver
-#          url: jdbc:mysql://127.0.0.1:3306/febs_test?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+          url: jdbc:mysql://127.0.0.1:3306/isolated_comm?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
   aop:
     proxy-target-class: true
 
@@ -53,7 +47,7 @@ spring:
 
 #mybatis plus 设置
 mybatis-plus:
-  type-aliases-package: com.sunkaisens.ibss.system.domain,com.sunkaisens.ibss.job.domain
+  type-aliases-package: com.sunkaisens.isolated.system.domain,com.sunkaisens.isolated.module.domain
   mapper-locations: classpath:mapper/*/*.xml
   configuration:
     jdbc-type-for-null: null
@@ -66,16 +60,16 @@ management:
     web:
       exposure:
         include: ['httptrace', 'metrics']
-febs:
+sysbase:
   # 是否异步记录用户操作日志
-  openAopLog: true
+  openAopLog: false
   shiro:
     # 后端免认证接口 url
-    anonUrl: /login,/logout/**,/regist,/user/check/**
+    anonUrl: /module-paras/**,/test,/login,/logout/**,/regist,/user/check/**
     # token有效期，单位秒
     jwtTimeOut: 3600
 
-ibss:
+isolated:
   ip2region:
     enabled: false
   # 单次最大批量入库数量
@@ -83,3 +77,11 @@ ibss:
     batch:
       insert:
         num: 1000
+
+  udp:
+    comm:
+      localIP: 127.0.0.1
+      localPort: 6655
+      remoteIP: 127.0.0.1
+      remotePort: 6644
+      

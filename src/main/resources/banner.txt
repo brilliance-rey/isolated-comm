@@ -1,5 +1,5 @@
 |-----------------------------------------|
-|    Sunkaisens Web Service               |
+|    Sunkaisens Isolated Communication    |
 |    V1.0.0                               |
 |                                         |
 |    Spring-Boot-Version: ${spring-boot.version}   |
